@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="864e34f6-8524-48a9-98eb-e1b88ce326f8" name="Changes" comment="v1 &#10;generates csv of: &#10;1) symbols with Binance perpetual future on Ethereum network&#10;2) contract address&#10;3) current price&#10;4) past 24hr volume">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="864e34f6-8524-48a9-98eb-e1b88ce326f8" name="Changes" comment="v1 &#10;generates csv of: &#10;1) symbols with Binance perpetual future on Ethereum network&#10;2) contract address&#10;3) current price&#10;4) past 24hr volume" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +80,7 @@
       <workItem from="1711012387919" duration="6161000" />
       <workItem from="1711111544213" duration="7931000" />
       <workItem from="1711119787252" duration="250000" />
-      <workItem from="1711205368929" duration="242000" />
+      <workItem from="1711205368929" duration="385000" />
     </task>
     <task id="LOCAL-00001" summary="v1 &#10;generates csv of: &#10;1) symbols with Binance perpetual future on Ethereum network&#10;2) contract address&#10;3) current price&#10;4) past 24hr volume">
       <option name="closed" value="true" />
@@ -108,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711118978936</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="v1 &#10;generates csv of: &#10;1) symbols with Binance perpetual future on Ethereum network&#10;2) contract address&#10;3) current price&#10;4) past 24hr volume">
+      <option name="closed" value="true" />
+      <created>1711205663420</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711205663420</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
