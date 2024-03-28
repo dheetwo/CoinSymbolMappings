@@ -7,22 +7,34 @@ url = "https://www.binance.com/bapi/composite/v1/public/promo/cmc/cryptocurrency
 response = requests.get(url)
 data = response.json()
 data_list = data["data"]["body"]["data"]
-etherscan_binance_perps_symbols = [
-    "BNB", "NEAR", "WLD", "INJ", "ARB", "ID", "LINK", "REEF", "ZRX", "PIXEL",
-    "FET", "ARPA", "FTM", "SPELL", "CELO", "GMT", "RNDR", "MKR", "UNI", "GRT",
-    "APE", "SSV", "MEME", "SAND", "DYDX", "STX", "ARKM", "ENS", "ZIL", "SNX",
-    "AXS", "CRV", "THETA", "LDO", "TRB", "UMA", "AI", "ALT", "BIGTIME", "BLUR",
-    "POWR", "PEOPLE", "HOT", "MASK", "LPT", "ACH", "MANA", "CHZ", "CAKE",
-    "ONDO", "COMP", "STMX", "PORTAL", "IOTX", "LINA", "IMX", "SUSHI", "STORJ",
-    "TRX", "LRC", "OCEAN", "OGN", "LEVER", "API3", "SXP", "RDNT", "FXS", "MTL",
-    "QNT", "IOST", "ENJ", "CHR", "COTI", "GAS", "1INCH", "WOO", "CTSI", "METIS",
-    "MAV", "BOND", "SLP", "PENDLE", "RSR", "RLC", "KNC", "ZETA", "YFI", "DENT",
-    "GLM", "LIT", "FRONT", "ORBS", "TLM", "AUCTION", "SFP", "OMG", "ONE",
-    "SKL", "ILV", "C98", "ALPHA", "MDT", "ALICE", "STG", "BAND", "T", "ATA",
-    "HFT", "DUSK", "CELR", "KEY", "GTC", "AMB", "BAT", "AXL", "BLZ", "NMR",
-    "OM", "CVX", "TOKEN", "BNT", "NKN", "LQTY", "BAL", "IDEX", "TRU",
-    "AGLD", "USDC", "SNT", "OXT", "COMBO", "ANT"
+binance_perpetuals_symbols = [
+    "BTC", "ETH", "SOL", "1000PEPE", "XRP", "AVAX", "BNB", "DOGE", "ORDI", "NEAR",
+    "1000SHIB", "WLD", "INJ", "HIFI", "GALA", "ARB", "WIF", "1000FLOKI", "ID", "FIL",
+    "LTC", "TIA", "ADA", "MATIC", "OP", "LINK", "REEF", "WAVES", "RUNE", "DOT", "ZRX",
+    "SEI", "BCH", "PIXEL", "SUI", "FET", "1000SATS", "ETC", "ARPA", "1000BONK", "FTM",
+    "SPELL", "CELO", "GMT", "RNDR", "APT", "MKR", "UNI", "MANTA", "ATOM", "GRT", "APE",
+    "JUP", "TON", "SSV", "MEME", "SAND", "DYDX", "STRK", "MOVR", "STX", "JOE", "PYTH",
+    "EOS", "ALGO", "ARKM", "ENS", "AAVE", "ZIL", "SNX", "AXS", "CRV", "THETA", "1000RATS",
+    "MINA", "ICP", "XAI", "YGG", "MYRO", "LDO", "TRB", "UMA", "AI", "ALT", "FLOW", "BAKE",
+    "BIGTIME", "EGLD", "BLUR", "POWR", "ANKR", "XLM", "PEOPLE", "HOT", "JASMY", "MASK",
+    "1000LUNC", "IOTA", "JTO", "LPT", "DYM", "CFX", "ACH", "HBAR", "MANA", "CHZ", "LOOM",
+    "PHB", "ZEN", "CAKE", "ONDO", "COMP", "BELU", "STMX", "PORTAL", "AR", "CKB", "ACE",
+    "XEM", "KSM", "IOTX", "XVG", "NFP", "LINA", "IMX", "VET", "SUSHI", "LUNA2", "MAGIC",
+    "UNFI", "STORJ", "TRX", "QTUM", "LRC", "OCEAN", "XTZ", "OGN", "LEVER", "NEO", "API3",
+    "SXP", "RONIN", "RDNT", "GLMR", "FXS", "MTL", "QNT", "GAL", "IOST", "ENJ", "CHR",
+    "COTI", "GAS", "1INCH", "MAVIA", "ROSE", "1000XEC", "WOO", "FLM", "ASTR", "ZEC",
+    "KAVA", "AUDIO", "CTSI", "PERP", "USTC", "BSV", "METIS", "BNX", "MAV", "RAD", "GMX",
+    "BOND", "SLP", "PENDLE", "RSR", "KAS", "RLC", "CYBER", "EDU", "KNC", "ZETA", "ONT",
+    "KLAY", "YFI", "RVN", "DENT", "BEAMX", "GLM", "LIT", "FRONT", "ARK", "ORBS", "ICX",
+    "TLM", "NTRN", "AUCTION", "SFP", "OMG", "LSK", "HOOK", "ONE", "SKL", "ILV", "C98",
+    "DAR", "XVS", "DASH", "ALPHA", "MDT", "ALICE", "STG", "BAND", "T", "ATA", "STRAX",
+    "HFT", "DUSK", "CELR", "POLYX", "KEY", "GTC", "BICO", "AMB", "BAT", "REN", "AXL",
+    "BLZ", "NMR", "TWT", "OM", "SUPER", "DODOX", "BADGER", "XMR", "CVX", "TOKEN", "BNT",
+    "NKN", "LQTY", "HIGH", "MBL", "RIF", "BAL", "IDEX", "WAXP", "STEEM", "CTK", "TRU",
+    "SPTPT", "DGB", "AGLD", "ETHW", "USDC", "SNT", "OXT", "COMBO", "ONG", "ANT", "BTCDOM",
+    "DEFI", "FOOTBALL", "BLUEBIRD"
 ]
+
 address_dict = {}
 
 def get_token_address(symbol):
@@ -37,7 +49,7 @@ def get_token_address(symbol):
     return "Symbol not found"
 
 
-for symbol in etherscan_binance_perps_symbols:
+for symbol in binance_perpetuals_symbols:
     address_dict[symbol] = get_token_address(symbol)
 
 

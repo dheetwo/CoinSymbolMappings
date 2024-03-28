@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="864e34f6-8524-48a9-98eb-e1b88ce326f8" name="Changes" comment="v1 &#10;generates csv of: &#10;1) symbols with Binance perpetual future on Ethereum network&#10;2) contract address&#10;3) current price&#10;4) past 24hr volume">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/decimals.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/address price 24hr volume by symbol.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addresses.py" beforeDir="false" afterPath="$PROJECT_DIR$/addresses.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/addresses2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/cmc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/merged_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/symbol.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/stats.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,12 +55,15 @@
     &quot;Python.addresses.executor&quot;: &quot;Run&quot;,
     &quot;Python.addresses2.executor&quot;: &quot;Run&quot;,
     &quot;Python.contract.executor&quot;: &quot;Run&quot;,
+    &quot;Python.decimals.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;Python.price.executor&quot;: &quot;Run&quot;,
+    &quot;Python.stats.executor&quot;: &quot;Run&quot;,
     &quot;Python.ticker.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/My Drive/Python Projects/diff_crawler&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -86,7 +97,12 @@
       <workItem from="1711012387919" duration="6161000" />
       <workItem from="1711111544213" duration="7931000" />
       <workItem from="1711119787252" duration="250000" />
-      <workItem from="1711205368929" duration="1267000" />
+      <workItem from="1711205368929" duration="1504000" />
+      <workItem from="1711207420815" duration="4504000" />
+      <workItem from="1711366178155" duration="594000" />
+      <workItem from="1711464168705" duration="70000" />
+      <workItem from="1711518799579" duration="2928000" />
+      <workItem from="1711609608244" duration="1382000" />
     </task>
     <task id="LOCAL-00001" summary="v1 &#10;generates csv of: &#10;1) symbols with Binance perpetual future on Ethereum network&#10;2) contract address&#10;3) current price&#10;4) past 24hr volume">
       <option name="closed" value="true" />
@@ -172,15 +188,17 @@
     <option name="LAST_COMMIT_MESSAGE" value="v1 &#10;generates csv of: &#10;1) symbols with Binance perpetual future on Ethereum network&#10;2) contract address&#10;3) current price&#10;4) past 24hr volume" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CoinSymbolMappings$addresses2.coverage" NAME="addresses2 Coverage Results" MODIFIED="1711027025825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CoinSymbolMappings$Ticker_to_Binance_Price.coverage" NAME="Ticker to Binance Price Coverage Results" MODIFIED="1710995691743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CoinSymbolMappings$stats.coverage" NAME="stats Coverage Results" MODIFIED="1711208343978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CoinSymbolMappings$Symbol_to_Contract_Address.coverage" NAME="Symbol to Contract Address Coverage Results" MODIFIED="1710993888572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CoinSymbolMappings$price.coverage" NAME="price Coverage Results" MODIFIED="1711117247573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CoinSymbolMappings$address.coverage" NAME="address Coverage Results" MODIFIED="1710996740154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CoinSymbolMappings$contract.coverage" NAME="contract Coverage Results" MODIFIED="1711026411843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CoinSymbolMappings$addresses.coverage" NAME="addresses Coverage Results" MODIFIED="1711115137410" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CoinSymbolMappings$Binance_Daily_Volume_Traded.coverage" NAME="Binance Daily Volume Traded Coverage Results" MODIFIED="1710994934113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CoinSymbolMappings$main.coverage" NAME="main Coverage Results" MODIFIED="1711610664620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CoinSymbolMappings$addresses2.coverage" NAME="addresses2 Coverage Results" MODIFIED="1711027025825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CoinSymbolMappings$Ticker_to_Binance_Price.coverage" NAME="Ticker to Binance Price Coverage Results" MODIFIED="1710995691743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CoinSymbolMappings$contract.coverage" NAME="contract Coverage Results" MODIFIED="1711026411843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CoinSymbolMappings$addresses.coverage" NAME="addresses Coverage Results" MODIFIED="1711208212654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CoinSymbolMappings$decimals.coverage" NAME="decimals Coverage Results" MODIFIED="1711609957303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CoinSymbolMappings$ticker.coverage" NAME="ticker Coverage Results" MODIFIED="1711028889609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CoinSymbolMappings$main.coverage" NAME="main Coverage Results" MODIFIED="1711118332695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
